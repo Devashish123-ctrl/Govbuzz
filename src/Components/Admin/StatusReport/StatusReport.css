@@ -1,0 +1,257 @@
+.statusReport{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 1rem;
+}
+.rowContent{
+    display: flex;
+    justify-content: flex-start;
+    gap: .5rem;
+    align-items: center;
+}
+.colContent{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .2rem;
+}
+.statusReport thead{
+    width: 100%;
+}
+
+.statusReport thead td{
+    font-size:.9rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--textColordark);
+    border-bottom: 1px solid var(--navColor);
+    padding-bottom: 10px;
+}
+.statusReport thead td button{
+    padding: 5px 10px;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+    border-radius: 5px;
+}
+.statusReport thead td button img{
+    width: 20px;
+    height: 20px;
+}
+
+.statusReport thead td button h3{
+    font-size:.9rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.statusReport tbody tr{
+    background-color: var(--navColor);
+
+}
+.statusReport tbody tr td{
+    padding: 20px;
+    font-size:.9rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--textColordark);
+}
+.statusReport tbody tr td:first-child{
+    border-radius: 5px 0 0 5px;
+}
+.statusReport tbody tr td .colContent p{
+    font-size:.9rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--textColordark);
+    text-align: start;
+}
+
+.statusReport tbody tr td .colContent h5{
+    font-size:.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--textColordark);
+    text-align: start;
+}
+
+.statusReport tbody tr td select{
+    border: 2px solid;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: .8rem;
+    color: var(--textColor);
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    text-align: center;
+}
+.statusReport tbody tr td select:focus{
+    outline-width: 0;
+}
+.statusReport tbody tr td .rowContent p{
+    font-size:.9rem;
+    font-weight: 600;
+    background-color: var(--mainColor);
+    border-radius: 30px;
+    padding: 5px 10px;
+    text-transform: capitalize;
+    color: var(--textColor);
+}
+.statusReport tbody tr td .type{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 15px;
+    border: 2px solid var(--notresolveColor);
+    color: var(--notresolveColor);
+    padding: 10px;
+    width: 50%;
+}
+.statusReport tbody tr td .type h5{
+    font-size: .9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.statusReport tbody tr td .type p{
+    font-size: .6rem;
+    font-weight: 400;
+    width: 100%;
+}
+.statusReport tbody tr td .rowContent h3{
+    font-size:.9rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--textColordark);
+}
+.statusReport tbody tr td:last-child{
+    text-align: center;
+    border-radius: 0 5px 5px 0;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+.pagination button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    color: var(--mainColor);
+    background-color: var(--navColor);
+    font-size: 1rem;
+    font-weight: 700;
+    transition: var(--transition);
+    cursor: pointer;
+}
+.pagination button.active,.pagination button:hover{
+    color: var(--textColor);
+    background-color: var(--mainColor);
+}
+
+/* for tablets */
+@media screen and (max-width:999px) {
+    .statusReport tbody tr td .rowContent{
+        flex-direction: column;
+    }
+    .statusReport td{
+        text-align: center;
+    }
+    .statusReport tbody tr td .type {
+        width: 100%;
+        text-align: start;
+    }
+}
+
+/* for mobile */
+@media screen and (max-width:599px) {
+    .statusReport tbody tr td .type h5 {
+        font-size: .8rem;
+    }
+    .statusReport tbody tr td .type p {
+        font-size: .5rem;
+    }
+    .pagination button {
+        width: 30px;
+        height: 30px;
+        font-size: .8rem;
+    }
+    .statusReport thead{
+        display: none;
+    }
+
+    .statusReport tbody tr{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .statusReport tbody{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    .statusReport tbody tr td:first-child{
+        width: 60%;
+        border-radius: 0;
+    }
+    .statusReport tbody tr td{
+        width: 100%;
+        border-bottom: 1px solid #b5b5b5;
+        width: 60%;
+        font-size: .7rem;
+        padding: 5px;
+        position: relative;
+    }
+    .statusReport tbody tr td .colContent p {
+        font-size: .8rem;
+        text-align: justify;
+    }
+    .statusReport tbody tr td .colContent h5 {
+        font-size: .6rem;
+    }
+    .statusReport tbody tr td select{
+        font-size: .7rem;
+    }
+    .statusReport tbody tr td .rowContent h3 {
+        font-size: .7rem;
+    }
+    .statusReport tbody tr td .rowContent p {
+        font-size: .7rem;
+    }
+    .statusReport tbody tr td:last-child{
+        border-bottom: none;
+    }
+
+    .statusReport tbody tr td::after{
+        position: absolute;
+        top: 0;
+        left: calc(-43% - 25px);
+        width: calc(43% + 25px);
+        height: 100%;
+        content: attr(data-attr );
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: .7rem;
+        font-weight: 600;
+        border-bottom: 1px solid #b5b5b5;
+        text-align: start;
+    }
+
+    .statusReport tbody tr td:last-child:after{
+        border-bottom: none;
+    }
+}
